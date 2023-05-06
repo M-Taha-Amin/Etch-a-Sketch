@@ -1,10 +1,27 @@
 const numberInput = document.querySelector(".number-input");
-
-// Generate Grid based on slider Value
+const bucketBtn = document.querySelector(".bucket");
+const rainbowBtn = document.querySelector(".rainbow");
+const eraserBtn = document.querySelector(".eraser");
+const clearBtn = document.querySelector(".clear");
+const warning = document.querySelector(".warning");
 const grid = document.querySelector(".grid");
+
+// Generate Grid based on Input Value
 numberInput.addEventListener("input", function (event) {
   const numberInputValue = +event.target.value;
-  makeGrid(numberInputValue);
+  if (
+    isNaN(numberInputValue) ||
+    numberInputValue < 1 ||
+    numberInputValue > 100
+  ) {
+    warning.style.display = "flex";
+    setTimeout(function () {
+      warning.style.display = "none";
+    }, 3000);
+  } else {
+    warning.style.display = "none";
+    makeGrid(numberInputValue);
+  }
 });
 
 // Functions
@@ -17,3 +34,8 @@ const makeGrid = function (value) {
     grid.append(block);
   }
 };
+const colorBlocks = function () {};
+
+bucketBtn.addEventListener("click", function () {
+  colorBlocks(black);
+});
