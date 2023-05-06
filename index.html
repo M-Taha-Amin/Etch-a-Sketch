@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="center-txt">Etch a Sketch</h1>
+        <div class="slider-container box-shadow">
+          <p class="slider-value center-txt">0 x 0</p>
+          <input type="range" min="0" max="100" class="slider" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container main-container">
+        <div class="tools box-shadow center-txt">
+          <div class="tool-container">
+            <img
+              src="Images/paint-bucket.svg"
+              alt="paint-bucket"
+              class="tool bucket"
+            />
+            <p class="tool-name">Color</p>
+          </div>
+
+          <div class="tool-container">
+            <img src="Images/rainbow.svg" class="rainbow tool" alt="rainbow" />
+            <p class="tool-name">Rainbow</p>
+          </div>
+          <div class="tool-container">
+            <img src="Images/eraser.svg" alt="eraser" class="tool eraser" />
+            <p class="tool-name">Eraser</p>
+          </div>
+          <div class="tool-container">
+            <img src="Images/clear.svg" alt="clear-button" class="tool clear" />
+            <p class="tool-name">Clear</p>
+          </div>
+        </div>
+        <div class="grid"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
