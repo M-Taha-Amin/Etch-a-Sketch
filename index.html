@@ -17,9 +17,14 @@
     <header>
       <div class="container">
         <h1 class="center-txt">Etch a Sketch</h1>
-        <div class="slider-container box-shadow">
-          <p class="slider-value center-txt">0 x 0</p>
-          <input type="range" min="0" max="100" class="slider" />
+        <div class="number-container box-shadow center-txt">
+          <p class="number">Enter a number</p>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            class="number-input center-txt"
+          />
         </div>
       </div>
     </header>
@@ -48,7 +53,7 @@
             <p class="tool-name">Clear</p>
           </div>
         </div>
-        <div class="grid"><div class="block"></div></div>
+        <div class="grid"></div>
       </div>
     </main>
     <script src="script.js"></script>

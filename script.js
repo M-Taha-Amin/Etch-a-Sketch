@@ -1,8 +1,19 @@
-// Display for slider value
-const slider = document.querySelector(".slider");
-const sliderValueDisplay = document.querySelector(".slider-value");
+const numberInput = document.querySelector(".number-input");
 
-slider.addEventListener("input", function (event) {
-  const sliderValue = event.target.value;
-  sliderValueDisplay.textContent = `${sliderValue} x ${sliderValue}`;
+// Generate Grid based on slider Value
+const grid = document.querySelector(".grid");
+numberInput.addEventListener("input", function (event) {
+  const numberInputValue = +event.target.value;
+  makeGrid(numberInputValue);
 });
+
+// Functions
+const makeGrid = function (value) {
+  grid.innerHTML = "";
+  for (let i = 1; i <= value * value; i++) {
+    const block = document.createElement("div");
+    block.classList.add("block");
+    grid.style.gridTemplateColumns = `Repeat(${value},1fr)`;
+    grid.append(block);
+  }
+};
